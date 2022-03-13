@@ -1,0 +1,47 @@
+.full-image-container{
+    display:block;
+    overflow: hidden;
+    padding: 56.25% 0 0 0;
+    position: relative;
+    max-height: 500px;
+    @include breakpoint($breakpoint-tablet){
+        padding: initial;
+    }
+    img{
+    
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        top:0;
+        position: absolute;
+        @include breakpoint($breakpoint-tablet){
+            position: relative;
+        }
+    }
+    .float-container{
+        top:46.25%;
+        position: absolute;
+        right: 0;
+        width: 50%;
+        z-index: 1;
+        color:$light-gray;
+        @include breakpoint($breakpoint-tablet){
+            width: 90%;
+        }
+        h3{
+            font-size: $font-m;
+            margin: 10px 15px
+        }
+        .ribbon-cover{
+            padding: 15px 20px;
+            flex-direction: column;
+            display: flex;
+            background:$color-red;
+           
+            h2{
+                font-size: $font-l;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

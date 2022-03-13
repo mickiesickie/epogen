@@ -1,0 +1,45 @@
+.section-nav-container{
+    background:$mobile-gray;
+    padding: 10px;
+    @include breakpoint($breakpoint-tablet){
+        padding: 0;
+        margin-top:6px;
+    }
+    nav{
+        display: flex;
+        margin: 0 auto;
+        max-width: 960px;
+        justify-content: space-around;
+        align-items: center;
+        @include breakpoint($breakpoint-tablet){
+           flex-direction: column;
+           align-items: center;
+           padding: 15px 0;
+        }
+    }
+    .link-nav{
+        color:$dark-gray;
+        font-weight: 300;
+        text-transform: uppercase;
+        cursor:pointer;
+        @include breakpoint($breakpoint-tablet){
+          border-top: 1px solid $dark-gray;
+          padding: 10px 0;
+          width: 100%;
+          text-align: center;
+         }
+        &.active-label{
+            width: auto;
+            border-top: none;
+            background-color: $color-red;
+            font-weight: bold;
+            color:$light-gray;
+            padding: 3px 10px;
+            border-radius: 15px;
+           margin: initial;
+            @include breakpoint($breakpoint-tablet){
+                margin:10px 0;
+            }
+        }
+    }
+}

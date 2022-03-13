@@ -1,0 +1,332 @@
+.wrapper-section{
+    padding: 30px 0px;
+    position: relative;
+    border-bottom: 1px solid $dark-gray;
+    background:$light-gray;
+    
+    &:last-child{
+        border:none;
+    }
+    &.second{
+        padding-bottom: 80px;
+        @include breakpoint($breakpoint-tablet){
+            padding-bottom: 0px;
+        }
+        .caption-left{
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            width: 50%;
+            position: relative;
+            padding-right: 30px;
+            @include breakpoint($breakpoint-tablet){
+                order:1;
+                width: 100%;
+            }
+            span{
+                position: absolute;
+                text-align: right;
+                top: 430px;
+                width: 300px;
+                color:$color-red;
+                right: 50px;
+                padding-right: 10px;
+                font-size: $font-m;
+                border-right: 5px $color-red solid;
+                font-style: italic;
+                border-left: none;
+                padding-left: 0;
+                @include breakpoint($breakpoint-tablet){
+                    margin: 30px;
+                    border-right: none;
+                    border-left:  5px $color-red solid;;
+                    right: inherit;
+                    top:inherit;
+                    position: relative;
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    &.third{
+        .picture-right{
+            right: 0px;
+            bottom: 0;
+            background-image:url('../assets/images/sect3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            left: 45%;
+            max-height: 550px;
+            img{
+                display: none;
+            }
+            @include breakpoint($breakpoint-tablet){
+                max-height: initial;
+                left: initial;
+                right: initial;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &.four{
+        .picture-left{
+           max-width: 70%;
+            max-height: 450px; 
+            right: 35%; 
+            background-image:url('../assets/images/sect4.jpg');
+
+        }
+        .caption-left{
+            top:0;
+            text-align: right;
+            @include breakpoint($breakpoint-tablet){
+                order: 1;
+            }
+            span{
+                border-left: none;
+                border-right: 5px $color-red solid;
+                top:480px;
+                padding-right: 15px;
+                right: 20px;
+                padding-left: 0;
+                @include breakpoint($breakpoint-tablet){
+                    right: inherit;
+                    top:inherit;
+                    border-right: none;
+                    text-align:left;
+                    right: initial;
+                    top: initial;
+                    padding-left: 15px;
+                    border-left: 5px $color-red solid;
+                }
+            }
+
+        }
+        
+    }
+
+    picture{
+        position: absolute;
+        z-index: 0;
+        overflow:hidden;
+        top:30px;
+        @include breakpoint($breakpoint-tablet){
+            position: relative;
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+                max-height: auto;
+            
+            }
+        }
+    }
+    .picture-left {
+        left: 0;
+        max-width:60%;
+        max-height: 400px;
+        background-image:url('../assets/images/sect2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        right: 45%;
+        bottom: 0;
+        img{
+            display: none;
+        }
+        @include breakpoint($breakpoint-tablet){
+            width: 100%;
+            margin-top: 30px;
+            position: relative;
+            right: inherit;
+            bottom: initial;
+            max-height: initial;
+            max-width: initial;
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .picture-right {
+        right: 0px;
+        max-height: 500px;
+        max-width: 55%;
+        
+    }
+    .caption1{
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        position: relative;
+        margin-top: inherit;
+        @include breakpoint($breakpoint-tablet){
+            width: 100%;
+            margin-top: 30px;
+        }
+        span{
+            border-left: 5px $color-red solid;
+            max-width: 350px;
+            position: absolute;
+            top: 550px;
+            padding-left: 10px;
+            font-style: italic;
+            color: $dark-gray;
+            line-height: 20px;
+            @include breakpoint($breakpoint-tablet){
+                position: relative;
+                top:inherit;
+                max-width: inherit;
+            }
+        }
+    }
+
+   
+    .center-container{
+        margin: 0 auto;
+        max-width: 960px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+            @include breakpoint($breakpoint-tablet){
+                flex-direction: column;
+            }
+        &.one-colum{
+        flex-direction: column;
+            @include breakpoint($breakpoint-tablet){
+                padding: 0 20px;
+            }
+        }
+    }
+    .text-container{
+        margin-top:90px;
+        position: relative;
+        width: 50%;
+        padding:30px 40px;
+        background: transparentize($color: #fff, $amount: .1);
+        @include breakpoint($breakpoint-tablet){
+           width: 100%;
+           margin-top: -30px;
+           padding-top: 70px;
+        }
+    }
+    .title-article{
+        color:$color-red;
+        font-size: $font-l;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .text-red{
+        color:$color-red;
+        font-size: $font-m;
+        font-weight: bold;
+        &.red-m{
+            font-size: inherit;
+        }
+    }
+    .text-article{
+        font-weight: 300;
+        color: $dark-gray;
+        line-height: 20px;
+        @include breakpoint($breakpoint-tablet){
+            font-size: $font-m;
+            font-weight:400;
+            line-height: 25px;
+        }
+    }
+    .caption-link{
+        text-decoration: underline;
+        color: $color-red;
+    }
+    .red-bullets{
+        color:$dark-gray;
+        font-weight: 300;
+        padding-left: 15px;
+        &.grid{
+            display: flex;
+            flex-direction: row;
+        @include breakpoint($breakpoint-tablet){
+            flex-direction: column;
+        }
+            div{
+                padding-right:10px;
+            }
+            .two-columns{
+                width: 50%;
+            }
+            .four-columns{
+                width: 25%;
+                @include breakpoint($breakpoint-tablet){
+                    width: 50%;
+                }
+                li{
+                    margin-top: 15px;
+                }
+            }
+            &.two-columns-m{
+                @include breakpoint($breakpoint-tablet){
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+         &.dashed{
+            margin-top: 15px;
+          li{
+            margin-top: 15px;
+            color:$dark-gray;
+            &::before{
+                content:"-"
+            }
+            &::marker{
+               font-size: 0;
+            }
+        }
+         }   
+    
+        li{
+            margin-bottom: 3px;
+            @include breakpoint($breakpoint-tablet){
+                margin-bottom: 15px;
+            }
+            p{
+                display: inline-block;
+                margin:0;
+            }
+            &::marker{
+                color: $color-red;
+            }
+        }
+    }
+    .to-top{
+        background: transparentize($dark-gray, .8);
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        bottom: 0px;
+        right:-50px;
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        @include breakpoint($breakpoint-tablet){
+            right: 50px;
+            bottom:-35px;
+            width: 70px;
+            height: 70px;
+            font-size: $font-m;
+        }
+    }
+    
+}

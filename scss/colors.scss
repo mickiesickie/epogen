@@ -1,0 +1,19 @@
+$color-red:#f03d42;
+$main-gray:#c0c0c0;
+$light-gray: #fafafa;
+$dark-gray: #505050;
+$mobile-gray: #e5e4e2;
+
+//Vars
+$font-xs: 12px;
+$font-m: 20px;
+$font-l: 25px;
+
+//breakpoints
+$breakpoint-tablet: 768px;
+
+@mixin breakpoint($point) {
+    @media only screen and (max-width: $point) {
+    @content
+    }
+}

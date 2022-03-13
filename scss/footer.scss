@@ -1,0 +1,26 @@
+footer{
+    background:$mobile-gray;
+    padding: 30px 0px;
+    min-height: 90px;
+    .center-container{
+        margin: 0 auto;
+        max-width: 960px;
+        @include breakpoint($breakpoint-tablet){
+            text-align: center;
+        }
+        .link-underline{
+            padding: 5px;
+        }
+        .pipe{
+            padding: 2px;
+        }
+        .text-footer{
+            font-size: $font-xs;
+            color: $dark-gray;
+            font-weight: 300;
+            @include breakpoint($breakpoint-tablet){
+                text-align: center;
+            }
+        }    
+    }
+}
