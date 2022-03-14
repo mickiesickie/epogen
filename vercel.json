@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "name": "epogen",
+
+    "routes": [
+      {
+        "src": "(.*).js", "dest": "/$1.js"
+      },
+      {
+        "src": "(.*).css", "dest": "/$1.css"
+      },
+      {
+        "src": "(.*).*", "dest": "/$1.*"
+      },
+      {
+        "src": "/.*", "dest": "/index.html"
+      }
+    ]
+  }
